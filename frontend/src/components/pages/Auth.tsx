@@ -1,9 +1,9 @@
 // src/pages/Auth.tsx
 import React, { useState } from "react";
-import { authProcess } from "../api/authApi";
-import type { User } from "../types";
-import { IS_SIGNUP, SIGNUP_URL } from "../config/config";
-import { AUTH_TITLE } from "../utils/util";
+import { authProcess } from "../../api/authApi";
+import type { User } from "../../types";
+import { IS_SIGNUP, SIGNUP_URL } from "../../config/config";
+import { AUTH_TITLE } from "../../utils/util";
 import './Auth.css';
 
 interface Props {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { socket } from "../socket";
-import type { User, Player, Room, BOARD_TYPE, TURN_TYPE, WINNER_TYPE } from "../types";
-import { align, btns, containerGame, context, des, leaveBtn, restartBtn, result, square, title } from "./GameStyle";
+import { socket } from "../../socket";
+import type { User, Player, Room, BOARD_TYPE, TURN_TYPE, WINNER_TYPE } from "../../types";
+import './Game.css';
 
 interface GameProps {
   user: User;
@@ -22,22 +22,6 @@ const Game: React.FC<GameProps> = (props) => {
   const [turn, setTurn] = useState<TURN_TYPE>("X");
   const [gameOver, setGameOver] = useState(false);
   const [winner, setWinner] = useState<WINNER_TYPE>(null);
-
-  // const gameOver = () => {
-  //   setGameOver(true);
-  // }
-
-  // const checkLine = (board: (null | "X" | "O")[]): boolean => {
-  //   const first = board[0];
-
-  //   for (let i = 1; i < line[0].length; i++) {
-  //     const value = line[i];
-  //     if (value != first)
-  //       return false;
-  //   }
-
-  //   return true;
-  // }
 
   const checkWinner = (board: (null | "X" | "O")[]) => {
     const lines = [
@@ -147,18 +131,18 @@ const Game: React.FC<GameProps> = (props) => {
 
 
   return (
-    <div style={containerGame}>
-      <div style={context}>
-        <h2 style={title}>Room: {roomId}</h2>
-        <h3 style={des}>You are {mySymbol} | Turn: {turn}</h3>
+    <div className="container-game">
+      <div className="context-game">
+        <h2 className="title-game">Room: {roomId}</h2>
+        <h3 className="des-game">You are {mySymbol} | Turn: {turn}</h3>
 
-        <div style={align}>
+        <div className="align-game">
           {board.map((cell, i) => (
             <button
               key={i}
               onClick={() => handleClick(i)}
               disabled={cell !== null || gameOver || mySymbol !== turn}
-              style={square}
+              className="square"
             >
               {cell}
             </button>
@@ -166,22 +150,22 @@ const Game: React.FC<GameProps> = (props) => {
         </div>
 
         {gameOver ? (
-          <h3 style={result}>
+          <h3 className="result-game">
             {winner === "Draw" ? "Draw" : winner === mySymbol ? "You Win 🎉" : "You Lose 😢"}
           </h3>
         ) : null}
 
-        <div style={btns}>
+        <div className="btns-game">
           <button
             onClick={restartGame}
-            style={restartBtn}
+            className="restartBtn-game"
           >
             Restart Game
           </button>
 
           <button
             onClick={leaveRoom}
-            style={leaveBtn}
+            className="leaveBtn"
           >
             Leave Room
           </button>

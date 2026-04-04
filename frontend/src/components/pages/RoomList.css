@@ -1,0 +1,78 @@
+.containerRoom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.contentRoom {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 360px;
+}
+
+.titleRoom {
+  margin: 0;
+  color: #333;
+  text-align: center;
+}
+
+.ulRoom {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.liRoom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.joinBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.createRoom {
+  display: flex;
+  gap: 10px;
+}
+
+.newRoomId {
+  flex: 1;
+  /* fixed from '1px' */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.createBtn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2196F3;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

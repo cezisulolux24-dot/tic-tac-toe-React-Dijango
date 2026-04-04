@@ -1,8 +1,8 @@
 // src/pages/RoomList.tsx
 import React, { useEffect, useState } from "react";
-import { getRooms } from "../api/roomAPI";
-import type { Room } from "../types";
-import { containerRoom, contentRoom, createBtn, createRoom, joinBtn, liRoom, newRoomId, titleRoom, ulRoom } from "./RoomStyle";
+import { getRooms } from "../../api/roomAPI";
+import type { Room } from "../../types";
+import './RoomList.css';
 
 interface Props {
   onJoin: (roomId: string) => void;
@@ -18,7 +18,6 @@ const RoomList: React.FC<Props> = ({ onJoin }) => {
   };
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchRooms();
     const interval = setInterval(fetchRooms, 2000);
     return () => clearInterval(interval);
@@ -29,20 +28,20 @@ const RoomList: React.FC<Props> = ({ onJoin }) => {
   };
 
   return (
-    <div style={containerRoom}>
-      <div style={contentRoom}>
+    <div className={'containerRoom'}>
+      <div className={'contentRoom'}>
         <div>
-          <h2 style={titleRoom}>Rooms</h2>
-          {/* <button style={{ width: '65px', justifySelf: 'right' }}>Log out</button> */}
+          <h2 className={'titleRoom'}>Rooms</h2>
+          {/* <button className={'{ width: '65px', justifySelf: 'right' }}>Log out</button> */}
         </div>
 
-        <ul style={ulRoom}>
+        <ul className={'ulRoom'}>
           {rooms.map(room => (
-            <li key={room.id} style={liRoom}>
+            <li key={room.id} className={'liRoom'}>
               <span>{room.id} ({room.players.length}/2)</span>
               <button
                 onClick={() => joinRoom(room.id)}
-                style={joinBtn}
+                className={'joinBtn'}
               >
                 Join
               </button>
@@ -50,17 +49,17 @@ const RoomList: React.FC<Props> = ({ onJoin }) => {
           ))}
         </ul>
 
-        <h3 style={titleRoom}>Create Room</h3>
-        <div style={createRoom}>
+        <h3 className={'titleRoom'}>Create Room</h3>
+        <div className={'createRoom'}>
           <input
             value={roomId}
             onChange={e => setRoomId(e.target.value)}
             placeholder="Room ID"
-            style={newRoomId}
+            className={'newRoomId'}
           />
           <button
             onClick={() => joinRoom(roomId)}
-            style={createBtn}
+            className={'createBtn'}
           >
             Create
           </button>
