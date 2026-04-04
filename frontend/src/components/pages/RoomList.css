@@ -4,14 +4,13 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f0f2f5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
 }
 
 .contentRoom {
   padding: 30px;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -39,7 +38,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
 }
 
@@ -48,7 +47,7 @@
   border-radius: 6px;
   border: none;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--white-color);
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -63,7 +62,7 @@
   /* fixed from '1px' */
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   font-size: 16px;
 }
 
@@ -72,7 +71,7 @@
   border-radius: 8px;
   border: none;
   background-color: var(--secondary-color);
-  color: #fff;
+  color: var(--white-color);
   cursor: pointer;
   transition: background-color 0.3s;
 }

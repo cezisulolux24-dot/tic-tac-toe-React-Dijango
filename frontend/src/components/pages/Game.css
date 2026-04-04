@@ -11,7 +11,7 @@
 
 .context-game {
   padding: 30px;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -43,8 +43,8 @@
   font-size: 32px;
   font-weight: bold;
   border-radius: 12px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: 1px solid var(--border-color);
+  background-color: var(--white-color);
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@
   border-radius: 8px;
   border: none;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--white-color);
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -74,7 +74,7 @@
   padding: 12px 20px;
   border-radius: 8px;
   border: 1px solid var(--waring-color);
-  background-color: #fff;
+  background-color: var(--white-color);
   color: var(--waring-color);
   font-size: 16px;
   cursor: pointer;
