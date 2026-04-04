@@ -1,1 +1,1 @@
-export const AUTH_TITLE = { true: "Sign Up", false: "Sign In" };
+export const AUTH_TITLE: Record<string, string> = { true: "Sign Up", false: "Sign In" };

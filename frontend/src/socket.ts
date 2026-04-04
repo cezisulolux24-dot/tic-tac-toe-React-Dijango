@@ -1,7 +1,8 @@
 // src/socket.ts
-import { io } from "socket.io-client";
+import { io } from 'socket.io-client';
+import { BASE_URL } from "./config/config";
 
-export const socket = io("http://192.168.137.27:3000", {
+export const socket = io(BASE_URL, {
   autoConnect: true,
   reconnection: true,
   reconnectionAttempts: 5,

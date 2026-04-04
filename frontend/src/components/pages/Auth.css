@@ -1,68 +1,68 @@
 .container-auth {
-  display: "flex";
-  flex-direction: "column";
-  align-items: "center";
-  justify-content: "center";
-  min-height: "100vh";
-  background-color: "#f0f2f5";
-  font-family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 .content-auth {
-  padding: "40px";
-  background-color: "#fff";
-  border-radius: "12px";
-  box-shadow: "0 8px 20px rgba(0,0,0,0.1)";
-  width: "320px";
-  display: "flex";
-  flex-direction: "column";
-  gap: "20px";
-  text-align: "center"
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center
 }
 
 .title-auth {
   margin: 0;
-  color: "#333";
+  color: #333;
 }
 
 .input-auth {
-  padding: "12px";
-  border-radius: "8px";
-  border: "1px solid #ccc";
-  font-size: "16px";
-  width: "100%";
-  box-sizing: "border-box"
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box
 }
 
 .btn-submit {
-  padding: "12px";
-  border-radius: "8px";
-  border: "none";
-  background-color: "#4CAF50";
-  color: "#fff";
-  font-size: "16px";
-  cursor: "pointer";
-  transition: "background-color 0.3s"
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s
 }
 
 .btn-submit:hover {
-  background-color: "#45a049"
+  background-color: #4CAF50
 }
 
 .btn {
-  margin-top: "10px";
-  padding: "10px";
-  border-radius: "8px";
-  border: "1px solid #4CAF50";
-  background-color: "#fff";
-  color: "#4CAF50";
-  font-size: "14px";
-  cursor: "pointer";
-  transition: "all 0.3s"
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #4CAF50;
+  background-color: #fff;
+  color: #4CAF50;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s
 }
 
 .btn:hover {
-  background-color: "#4CAF50";
-  color: "#fff";
+  background-color: #4CAF50;
+  color: #fff;
 }

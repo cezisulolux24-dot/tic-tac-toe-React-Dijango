@@ -6,6 +6,7 @@ import './RoomList.css';
 
 interface Props {
   onJoin: (roomId: string) => void;
+  onLogout: () => void
 }
 
 const RoomList: React.FC<Props> = ({ onJoin }) => {

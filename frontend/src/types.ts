@@ -21,7 +21,7 @@ export interface MoveEvent {
 
 export interface Room {
   id: string,
-  players: [],
+  players: Player[],
   spectators: [],
   board: BOARD_TYPE[],
   turn: TURN_TYPE,

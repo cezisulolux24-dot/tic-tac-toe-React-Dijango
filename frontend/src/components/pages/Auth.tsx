@@ -34,7 +34,7 @@ const Auth: React.FC<Props> = ({ onLogin }) => {
     <div className="container-auth">
       <div className="content-auth">
         <h2 className="title-auth">
-          {AUTH_TITLE[isSignup]}
+          {AUTH_TITLE[isSignup.toString()]}
         </h2>
 
         <input
@@ -57,14 +57,14 @@ const Auth: React.FC<Props> = ({ onLogin }) => {
           className="btn-submit"
         >
           {/* {PAGE_TITLE[AUTH_STATUS]} */}
-          {AUTH_TITLE[isSignup]}
+          {AUTH_TITLE[isSignup.toString()]}
         </button>
 
         <button
           onClick={handleSignup}
           className="btn"
         >
-          Go To {AUTH_TITLE[!isSignup]}
+          Go To {AUTH_TITLE[(!isSignup).toString()]}
         </button>
       </div>
     </div>

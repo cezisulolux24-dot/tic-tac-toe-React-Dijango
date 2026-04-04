@@ -54,7 +54,7 @@ const Game: React.FC<GameProps> = (props) => {
       setPlayers(room.players);
       setBoard(room.board);
       setTurn(room.turn);
-      const me: Player = room.players.find((p: Player) => p.userId === user.id);
+      const me: Player | undefined = room.players.find((p: Player) => p.userId === user.id);
       setMySymbol(me ? me.symbol : null);
     });
   };
@@ -62,7 +62,7 @@ const Game: React.FC<GameProps> = (props) => {
     socket.off("connect", joinRoom);
     socket.off("updateRoom");
   }
-  const handleMove = ({ index, symbol, turn }) => {
+  const handleMove = ({ index, symbol, turn }: any) => {
     setBoard(prev => {
       const b = [...prev];
       b[index] = symbol;
