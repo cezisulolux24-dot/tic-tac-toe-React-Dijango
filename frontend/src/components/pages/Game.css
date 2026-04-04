@@ -1,0 +1,79 @@
+.container-game {
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+  justify-content: "center";
+  min-height: "100vh";
+  background-color: "#f0f2f5";
+  font-family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+  padding: 20
+}
+
+.context-game {
+  padding: "30px";
+  background-color: "#fff";
+  border-radius: "12px";
+  box-shadow: "0 8px 20px rgba(0,0,0,0.1)";
+  display: "flex";
+  flex-direction: "column";
+  gap: "20px";
+  align-items: "center"
+}
+
+export const title: React.CSSProperties= {
+  margin: 0, color: "#333"
+}
+
+export const des: React.CSSProperties= {
+  margin: 0, color: "#555"
+}
+
+export const align: React.CSSProperties= {
+  display: "grid",
+    gridTemplateColumns: "repeat(3, 100px)",
+    gridGap: '10px',
+    marginTop: '10px'
+}
+
+export const square: React.CSSProperties= {
+  height: '100px',
+    width: '100px',
+    fontSize: '32px',
+    fontWeight: "bold",
+    borderRadius: '12px',
+    border: "1px solid #ccc",
+    backgroundColor: "#fff",
+    cursor: "pointer",
+    transition: "all 0.2s",
+    boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+}
+
+export const result: React.CSSProperties= {
+  color: "#4CAF50"
+}
+
+export const btns: React.CSSProperties= {
+  display: "flex", gap: 15
+}
+
+export const restartBtn: React.CSSProperties= {
+  padding: "12px 20px",
+    borderRadius: 8,
+    border: "none",
+    backgroundColor: "#4CAF50",
+    color: "#fff",
+    fontSize: 16,
+    cursor: "pointer",
+    transition: "background-color 0.3s"
+}
+
+export const leaveBtn: React.CSSProperties= {
+  padding: "12px 20px",
+    borderRadius: 8,
+    border: "1px solid #f44336",
+    backgroundColor: "#fff",
+    color: "#f44336",
+    fontSize: 16,
+    cursor: "pointer",
+    transition: "all 0.3s"
+}

@@ -1,0 +1,1 @@
+export const AUTH_TITLE = { true: "Sign Up", false: "Sign In" };
