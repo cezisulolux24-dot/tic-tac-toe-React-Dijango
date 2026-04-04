@@ -22,12 +22,12 @@
 
 .title-game {
   margin: 0;
-  color: #333;
+  color: var(--text-color);
 }
 
 .des-game {
   margin: 0;
-  color: #333;
+  color: var(--text-color);
 }
 
 .align-game {
@@ -51,7 +51,7 @@
 }
 
 .result-game {
-  color: #4CAF50;
+  color: var(--primary-color);
 }
 
 .btns-game {
@@ -63,7 +63,7 @@
   padding: 12px 20px;
   border-radius: 8px;
   border: none;
-  background-color: #4CAF50;
+  background-color: var(--primary-color);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -73,9 +73,9 @@
 .leaveBtn-game {
   padding: 12px 20px;
   border-radius: 8px;
-  border: 1px solid #f44336;
+  border: 1px solid var(--waring-color);
   background-color: #fff;
-  color: #f44336;
+  color: var(--waring-color);
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
