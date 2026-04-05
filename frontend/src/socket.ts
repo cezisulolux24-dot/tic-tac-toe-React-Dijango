@@ -1,24 +1,13 @@
 // src/socket.ts
-import { io } from 'socket.io-client';
-import { BASE_URL } from "./config/config";
+let socket: WebSocket | null = null;
 
-export const socket = io(BASE_URL, {
-  autoConnect: true,
-  reconnection: true,
-  reconnectionAttempts: 5,
-  reconnectionDelay: 1000,
-});
+export const getSocket = (roomName: string): WebSocket => {
+  if (!socket || socket.readyState === WebSocket.CLOSED) {
+    socket = new WebSocket(`ws://127.0.0.1:8000/ws/game/${roomName}/`);
 
-// const joinRoom = ({
-//   roomId,
-//   userId
-//     username
-// }) => {
-//   if (!socket.connected) socket.connect();
-
-//   socket.emit("joinRoom", {
-//     roomId,
-//     userId: user.id,
-//     username: user.username
-//   });
-// };
+    socket.onopen = () => console.log(`✅ Connected to room: ${roomName}`);
+    socket.onerror = (err) => console.error("❌ WebSocket error:", err);
+    socket.onclose = () => console.log("WebSocket closed");
+  }
+  return socket;
+};

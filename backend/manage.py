@@ -3,9 +3,14 @@
 import os
 import sys
 
+from daphne.cli import CommandLineInterface
+
+
 
 def main():
     """Run administrative tasks."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
     try:
         from django.core.management import execute_from_command_line
@@ -15,8 +20,17 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+    sys.argv = [
+        'daphne',
+        '-b', '0.0.0.0',
+        '-p', '8000',
+        'backend.asgi:application' 
+    ]
+    CommandLineInterface.entrypoint()
     execute_from_command_line(sys.argv)
 
 
 if __name__ == '__main__':
+    # Override sys.argv to simulate command-line arguments.
+    # This allows running Daphne programmatically instead of from terminal.
     main()
